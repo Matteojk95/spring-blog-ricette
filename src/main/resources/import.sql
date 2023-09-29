@@ -1,0 +1,1 @@
+insert into ricette (titolo,ingredienti,time,porzioni,testoRicette) values ('carbonara', 'uova e pancetta', 15, 1,'sbattere le uova e versarle sulla pasta dopo aver cotto la pancetta')
