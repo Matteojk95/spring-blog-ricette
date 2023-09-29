@@ -1,4 +1,4 @@
-package org.ricette.springblogricette.Controller;
+package org.ricette.springblogricette.Model;
 
 import jakarta.persistence.*;
 
