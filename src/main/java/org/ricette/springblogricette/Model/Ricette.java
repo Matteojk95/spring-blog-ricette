@@ -2,6 +2,7 @@ package org.ricette.springblogricette.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "ricette")
@@ -17,9 +18,9 @@ public class Ricette {
     private String titolo;
     @NotBlank
     private String ingredienti;
-    @NotBlank
+    @NotNull
     private int time;
-    @NotBlank
+    @NotNull
     private int porzioni;
     @NotBlank
     private String testoRicetta;
@@ -47,7 +48,7 @@ public class Ricette {
         return ingredienti;
     }
 
-    public void setIngredients(String ingredienti) {
+    public void setIngredienti(String ingredienti) {
         this.ingredienti = ingredienti;
     }
 
