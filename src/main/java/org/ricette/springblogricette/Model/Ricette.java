@@ -1,6 +1,7 @@
 package org.ricette.springblogricette.Model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "ricette")
@@ -11,11 +12,16 @@ public class Ricette {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotBlank
     @Column(length = 255, nullable = false, unique = true)
     private String titolo;
+    @NotBlank
     private String ingredienti;
+    @NotBlank
     private int time;
+    @NotBlank
     private int porzioni;
+    @NotBlank
     private String testoRicetta;
 
 
@@ -27,6 +33,7 @@ public class Ricette {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     public String getTitolo() {
         return titolo;

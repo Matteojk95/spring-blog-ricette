@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Ricette </title>
+
+</head>
+<body>
+<div>
+    <h1> Ricette </h1>
+    <hr>
+    <h2> proposte irresistibili </h2>
+
+    <a class="btn btn-primary" th:href="@{/ricette/create}"> add Ricetta </a>
+    <table>
+        <thead>
+        <tr>
+            <th> titolo</th>
+            <th> ingredienti</th>
+            <th> time</th>
+            <th> porzioni</th>
+            <th> testoRicetta</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ricetta: ${ricetteList}">
+            <td th:text="${ricetta.titolo}"></td>
+            <td th:text="${ricetta.ingredienti}"></td>
+            <td th:text="${ricetta.time}"></td>
+            <td th:text="${ricetta.porzioni}"></td>
+            <td th:text="${ricetta.testoRicetta}"></td>
+
+            
+        </tr>
+
+        </tbody>
+
+
+    </table>
+</div>
+
+</body>
+</html>
